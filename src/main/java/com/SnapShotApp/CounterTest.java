@@ -41,15 +41,15 @@ public class CounterTest extends JFrame implements ActionListener {
 		setTitle(TITLE);
 		count = 0;
 
-		choosePathVeriable = new JButton("Choose Path");
-		choosePathVeriable.setBounds(15, 17, 215, 30);
+		choosePathVeriable = new JButton("Path");
+		choosePathVeriable.setBounds(15, 17, 100, 30);
 		choosePathVeriable.addActionListener(this);
 
 		filePathLabel = new JLabel();
 		filePathLabel.setBounds(20, 43, 1024, 30);
 
 		takeSnapeButtonVeriable = new JButton("Take Snap");
-		takeSnapeButtonVeriable.setBounds(15, 70, 215, 30);
+		takeSnapeButtonVeriable.setBounds(130, 17, 100, 30);
 		takeSnapeButtonVeriable.addActionListener(this);
 
 		developerNameLabel = new JLabel("Developed By Saravanakumar Tj");
@@ -57,8 +57,8 @@ public class CounterTest extends JFrame implements ActionListener {
 		add(choosePathVeriable);
 		add(filePathLabel);
 		add(takeSnapeButtonVeriable);
-		add(developerNameLabel);
-		setSize(256, 180);
+		//add(developerNameLabel);
+		setSize(256, 110);
 		setLocationRelativeTo(null);
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
