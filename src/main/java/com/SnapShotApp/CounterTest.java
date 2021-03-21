@@ -36,6 +36,7 @@ public class CounterTest extends JFrame implements ActionListener {
 
 	public static final String ERRORMSG = "Did you not select the path?";
 	public static final String TITLE = "SnapShot-0.2v";
+	public static final String WINDOWSUSERNAME = System.getProperty("user.name");
 
 	public CounterTest() {
 		setTitle(TITLE);
@@ -94,8 +95,8 @@ public class CounterTest extends JFrame implements ActionListener {
 			try {
 				Robot r = new Robot();
 
-			
-				String pathofCounter = "C:\\" + TITLE + "-Cache" + "\\";
+
+				String pathofCounter = "C:\\"+"Users\\"+WINDOWSUSERNAME+"\\"+"SnapShotAppCache"+"\\";
 				String path = filePathLabel.getText();
 				new File(pathofCounter).mkdir();
 				if (new File(pathofCounter + "cache.txt").createNewFile()) {
@@ -108,7 +109,7 @@ public class CounterTest extends JFrame implements ActionListener {
 
 				} else {
 
-					File file1 = new File("C:\\" + "SnapShot-0.2v" + "-Cache" + "\\" + "cache.txt");
+					File file1 = new File("C:\\"+"Users\\"+WINDOWSUSERNAME+"\\"+"SnapShotAppCache"+"\\"+"cache.txt");
 					FileInputStream fin = new FileInputStream(file1);
 					byte fileContent[] = new byte[(int) file1.length()];
 					fin.read(fileContent);
@@ -122,7 +123,7 @@ public class CounterTest extends JFrame implements ActionListener {
 
 				}
 
-				File file2 = new File("C:\\" + "SnapShot-0.2v" + "-Cache" + "\\" + "cache.txt");
+				File file2 = new File("C:\\"+"Users\\"+WINDOWSUSERNAME+"\\"+"SnapShotAppCache"+"\\"+"cache.txt");
 				FileInputStream fin1 = new FileInputStream(file2);
 				byte fileContent1[] = new byte[(int) file2.length()];
 				fin1.read(fileContent1);
