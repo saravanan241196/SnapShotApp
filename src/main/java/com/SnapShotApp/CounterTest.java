@@ -132,7 +132,7 @@ public class CounterTest extends JFrame implements ActionListener {
 					String countValues1 = new String(fileContent1);
 					fin1.close();
 					jfrm.setVisible(false);
-					try {Thread.sleep(150);} catch (InterruptedException ie) {Thread.currentThread().interrupt();}
+					try {Thread.sleep(200);} catch (InterruptedException ie) {Thread.currentThread().interrupt();}
 					Rectangle capture = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
 					BufferedImage Image = r.createScreenCapture(capture);
 					ImageIO.write(Image, "jpg", new File(path + "\\" + "" + countValues1 + ".jpg"));
